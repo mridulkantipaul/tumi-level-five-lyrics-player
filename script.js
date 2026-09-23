@@ -115,10 +115,10 @@ audioInput.addEventListener("change", () => {
 
   if (audioUrl) {
     URL.revokeObjectURL(audioUrl);
+    audioUrl = undefined;
   }
 
-  audioUrl = URL.createObjectURL(file);
-  audio.src = audioUrl;
+  audio.srcObject = file;
   audio.load();
 });
 
