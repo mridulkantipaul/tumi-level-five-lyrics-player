@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karaoke Lyrics Player</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="player">
+      <h1>Karaoke Lyrics Player</h1>
+
+      <section class="controls">
+        <label>
+          Audio file
+          <input id="audio-file" type="file" accept="audio/*" />
+        </label>
+
+        <label>
+          LRC lyrics file
+          <input id="lyrics-file" type="file" accept=".lrc,text/plain" />
+        </label>
+
+        <audio id="audio" controls preload="metadata"></audio>
+      </section>
+
+      <section>
+        <h2>Lyrics</h2>
+        <div id="lyrics" class="lyrics" aria-live="polite">
+          <p class="placeholder">Load an audio file and an LRC file to start.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
